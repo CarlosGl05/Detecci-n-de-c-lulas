@@ -38,7 +38,7 @@ Imagen → Grayscale → Sobel → Magnitud → Threshold → Morphology → Blu
 
 ## 🚀 Instalación
 
-git clone https://github.com/AaronHero03/CellDetection.git
+git clone https://github.com/CarlosGl05/Detecci-n-de-c-lulas
 cd CellDetection
 pip install opencv-python numpy matplotlib
 
