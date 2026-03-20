@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv2.imread("blood.png")
+img = cv2.imread("blood.jpeg")
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Aplicar filtro de Sobel para detectar bordes
@@ -36,8 +36,12 @@ if circles is not None:
       cv2.circle(img, (i[0], i[1]), 2, (0, 255, 0), 3)
   
   num_circles = len(circles[0])
+else:
+  num_circles = 0
 
 print(f'Células detectadas: {num_circles}')
+
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 fig, axs = plt.subplots(2, 3, figsize=(10, 8))
 axs[0, 0].imshow(grad_x, cmap='gray')
@@ -60,7 +64,7 @@ axs[1, 1].imshow(gray_blurred, cmap='gray')
 axs[1, 1].set_title("Blurred")
 axs[1, 1].axis("off")
 
-axs[1, 2].imshow(img, cmap='gray')
+axs[1, 2].imshow(img)
 axs[1, 2].set_title("Circles")
 axs[1, 2].axis("off")
 
