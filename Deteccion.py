@@ -32,9 +32,9 @@ def deteccion_con_hough(img):
         dp=1.2,           # Aumentar ligeramente la resolución del acumulador ayuda con círculos difusos
         minDist=30,       # Reducimos un poco la distancia mínima entre centros
         param1=40,        # ¡CLAVE! Baja el umbral del detector de bordes Canny (antes 50). Así detecta bordes suaves.
-        param2=21,        # ¡CLAVE! Baja la exigencia de "perfección". Un valor más bajo (antes 25) detectará más círculos, aunque no sean perfectos.
-        minRadius=25,     # Asegúrate de que este valor sea un poco más pequeño que tu glóbulo rojo más pequeño
-        maxRadius=60
+        param2=25,        # ¡CLAVE! Baja la exigencia de "perfección". Un valor más bajo (antes 25) detectará más círculos, aunque no sean perfectos.
+        minRadius=20,     # Asegúrate de que este valor sea un poco más pequeño que tu glóbulo rojo más pequeño
+        maxRadius=70
     )
 
     output = img.copy()
